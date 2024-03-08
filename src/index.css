@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: azure;
+}
+
+.todo-container {
+  background: rgba(250, 235, 200, .8);
+  padding: 1em 5em;
+  margin: 0;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.todo-container h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 3em;
+  margin: 0;
+  padding: 0.7em;
+  color: rgba(0, 0, 0, .6);
+}
+
+.todo-container [type="text"] {
+  display: block;
+  width: 100%;
+  padding: 1.5em;
+  margin: 0 0 1em;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, .6);
+  background: rgba(250, 235, 200, .8);
+}
+
+.todo-container [type="text"]:focus {
+  background-color: white;
+  color: rgba(0, 0, 0, .6);
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.todo-container [type="text"]::placeholder {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-container .btn {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid rgb(23, 54, 54);
+  background-color: azure;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+.todo-container ul {
+  margin: 2em 0;
+  padding: 0rem;
+}
+
+.todo-container ul li {
+  list-style: none;
+  border-bottom: 1px solid rgba(0 ,0, 0, .2);
+  padding: 1em;
+  font-weight: 800;
+  text-transform: capitalize;
+  letter-spacing: .1em;
+}
+
+input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+li:has(input:checked) {
+  text-decoration: line-through;
+  color: rgba(23, 54, 54, .5);
+}
+
+li label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+ul .del-btn {
+  background-color: rgba(255, 0, 0, .7);
+  border: none;
+  padding: .5em;
+  color: white;
+}
+
+ul .del-btn:hover {
+  background-color: red;
+}
+
