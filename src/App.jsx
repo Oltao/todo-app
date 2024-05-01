@@ -39,10 +39,10 @@ function App() {
               <label>
                 <input type="checkbox" />
                 {todo.title}
-                <button className="del-btn" onClick={() => deleteTodo(todo.id)}>
+              </label>
+              <button className="del-btn" onClick={() => deleteTodo(todo.id)}>
                   Delete
                 </button>
-              </label>
             </li>
           );
         })}
