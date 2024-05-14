@@ -35,7 +35,7 @@ body {
   display: block;
   width: 100%;
   padding: 1.5em;
-  margin: 0 0 1em;
+  margin: 0;
   outline: none;
   border: 2px solid rgba(0, 0, 0, .6);
   background: rgba(250, 235, 200, .8);
@@ -67,6 +67,7 @@ body {
   text-transform: uppercase;
   letter-spacing: .2em;
   transition: all 1000ms ease;
+  margin-top: 1rem;
 }
 
 .todo-container .btn:hover {
@@ -82,12 +83,14 @@ body {
 .todo-container ul li {
   list-style: none;
   border-bottom: 1px solid rgba(0 ,0, 0, .2);
-  padding: 1em;
+  padding: 1em 0;
   font-weight: 800;
   text-transform: capitalize;
   letter-spacing: .1em;
   display: flex;
   justify-content: space-between;
+  height: 60px;
+  align-items: center;
 }
 
 input[type="checkbox"] {
@@ -117,5 +120,28 @@ ul .del-btn {
 
 ul .del-btn:hover {
   background-color: red;
+}
+
+ul .edit-btn {
+  background: rgb(0, 128, 0);
+  border:  none;
+  padding: .5em 1em;
+  color: white;
+  margin-left: 3px;
+}
+
+ul .edit-btn:hover {
+  background: rgba(0, 128, 0, .6);
+}
+
+ul .del-btn, ul .edit-btn {
+height: 100%;
+}
+
+.ED-btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
 }
 
